@@ -39,6 +39,18 @@ namespace Practica_3
 			Console.WriteLine("------------------------------------");
 		}
 		
+		public void eliminarAlumno(){
+			String codigo;
+			Console.Write("Codigo del alumno: ");
+			codigo=Console.ReadLine();
+			if(tabla.ContainsKey(codigo)){
+			   	tabla.Remove(codigo);
+			   	Console.WriteLine("Eliminado el alumno con el codigo : "+ codigo);
+			}
+			   	else Console.WriteLine("NO HAY alumno con codigo "+codigo);
+			   	Console.WriteLine("\n------------------------------------");
+		}
+		
 		public static void Main(string[] args)
 		{
 			int opcion;
@@ -52,7 +64,7 @@ namespace Practica_3
 						break;
 						case 2:programa.verAlumnos();
 						break;
-						case 3:
+						case 3:programa.eliminarAlumno();
 						break;
 				}
 			}while (opcion<4);
