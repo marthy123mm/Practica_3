@@ -24,6 +24,21 @@ namespace Practica_3
 		}
 		public static void Main(string[] args)
 		{
+			int opcion;
+			Program programa=new Program();
+			do{
+				Console.WriteLine("\tPractica 3 Con HashTable\n");
+				Console.WriteLine("\t1)Agregar Alumno\n\t2)Ver Alumnos \n\t3)Eliminar Alumno\n\t4)Salir");
+				opcion=int.Parse(Console.ReadLine());
+				switch(opcion){
+						case 1:programa.agregarAlumno();
+						break;
+						case 2:
+						break;
+						case 3:
+						break;
+				}
+			}while (opcion<4);
 		}
 	}
 }
