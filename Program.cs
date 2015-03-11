@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections;
 
 namespace Practica_3
 {
@@ -22,6 +23,22 @@ namespace Practica_3
 			tabla.Add(codigo,a);
 			Console.Clear();
 		}
+		public void verAlumnos(){
+			Console.WriteLine("Alumnos Registrados\n");
+			foreach ( string codigo in tabla.Keys){
+				try{
+					Console.WriteLine("------------------------------------");
+					Object obj= tabla[codigo];
+					Alumno a= (Alumno) obj;
+					Console.WriteLine(a.getDatos());
+					
+				}catch(Exception e){
+					Console.WriteLine("Hay un Error en este dato");
+				}
+			}
+			Console.WriteLine("------------------------------------");
+		}
+		
 		public static void Main(string[] args)
 		{
 			int opcion;
@@ -33,7 +50,7 @@ namespace Practica_3
 				switch(opcion){
 						case 1:programa.agregarAlumno();
 						break;
-						case 2:
+						case 2:programa.verAlumnos();
 						break;
 						case 3:
 						break;
