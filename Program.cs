@@ -45,7 +45,7 @@ namespace Practica_3
 			codigo=Console.ReadLine();
 			if(tabla.ContainsKey(codigo)){
 			   	tabla.Remove(codigo);
-			   	Console.WriteLine("Eliminado el alumno con el codigo : "+ codigo);
+			   	Console.WriteLine("Se Elminó el alumno con el codigo : "+ codigo);
 			}
 			   	else Console.WriteLine("NO HAY alumno con codigo "+codigo);
 			   	Console.WriteLine("\n------------------------------------");
@@ -65,6 +65,9 @@ namespace Practica_3
 						case 2:programa.verAlumnos();
 						break;
 						case 3:programa.eliminarAlumno();
+						break;
+						default:Console.WriteLine("ADIOSINI");
+						Console.ReadLine();
 						break;
 				}
 			}while (opcion<4);
